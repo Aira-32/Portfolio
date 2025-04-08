@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+@import url("https://use.typekit.net/jki6tsw.css");
+@import "tailwindcss";
+
+/* FONTS */
+
+@theme {
+    --font-rethink-sans: "Rethink Sans", sans-serif;
+    /*  */
+    --font-acier-bat-gris: "acier-bat-gris", sans-serif;
+    --font-scandia-line: "scandia-line-web", sans-serif;
+    /* molto fighi per i titoli grandi */
+    --font-halcom: "halcom", sans-serif;
+    /*  */
+    --font-area-extended: "area-extended", sans-serif;
+    /* bello solo per i titoli */
+}
+
+
+
+
+
+@layer base {
+    .flex-row-center {
+        @apply flex justify-center items-center;
+    }
+
+    .flex-col-center {
+        @apply flex flex-col justify-center items-center;
+    }
+
+    .flex-row-between {
+        @apply flex justify-between items-center;
+    }
+
+    .flex-col-between {
+        @apply flex flex-col justify-between items-center;
+    }
+
+    .flex-row-evenly {
+        @apply flex justify-evenly items-center;
+    }
+
+    .flex-col-evenly {
+        @apply flex flex-col justify-evenly items-center;
+    }
+
+    .flex-row-around {
+        @apply flex justify-around items-center;
+    }
+
+    .flex-col-around {
+        @apply flex flex-col justify-around items-center;
+    }
+    
+}
