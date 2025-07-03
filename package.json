@@ -5,7 +5,7 @@
   "main": "tailwind.config.js",
   "scripts": {
     "watch": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
-    "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css"
+    "build": "cpx ./src/**/*.* ./dist && tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +13,7 @@
   "type": "commonjs",
   "devDependencies": {
     "autoprefixer": "^10.4.21",
+    "cpx": "^1.5.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.1.1"
   }
