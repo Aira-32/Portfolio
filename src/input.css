@@ -49,8 +49,57 @@
         @apply flex justify-around items-center;
     }
 
+    
     .flex-col-around {
         @apply flex flex-col justify-around items-center;
     }
+
     
+
+    .flex-col-items-start {
+        @apply flex flex-col items-start;
+    }
+
+    .flex-col-items-end {
+        @apply flex flex-col items-end;
+    }
+
+    .flex-row-items-start {
+        @apply flex items-start;
+    }
+
+    .flex-row-items-end {
+        @apply flex items-end;
+    }
+
+    .flex-col-justify-start {
+        @apply flex flex-col justify-start;
+    }
+
+    .flex-col-justify-end {
+        @apply flex flex-col justify-end;
+    }
+
+    .flex-row-justify-start {
+        @apply flex justify-start;
+    }
+
+    .flex-row-justify-end {
+        @apply flex justify-end;
+    }
+
+
+    
+    @keyframes bounce-x {
+        0%, 100% {
+            transform: translateX(-15%);
+        }
+        50% {
+            transform: translateX(15%);
+        }
+    }
+
+    .animate-bounce-x {
+        animation: bounce-x 1.5s ease-in-out infinite;
+    }
 }
