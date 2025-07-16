@@ -20,7 +20,20 @@
 
 
 
+
 @layer base {
+    .no-scrollbar {
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+    }
+        .no-scrollbar::-webkit-scrollbar {
+        display: none; /* Chrome, Safari and Opera */
+    }
+    
+    dialog::backdrop {
+        @apply bg-black/40 backdrop-blur-md;
+      }
+
     .flex-row-center {
         @apply flex justify-center items-center;
     }
