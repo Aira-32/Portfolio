@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aurelia's personal portfolio - About Me page with my learning journey and passions">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="output.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="static/images/logo aira favicon.svg">
+    <title>About me - Aira Portfolio</title>
+</head>
+<body class="bg-gradient-to-br from-black to-[#8453c4] font-scandia-line text-gray-200"> <!-- MODIFICA: Impostato un colore di testo base per una migliore leggibilità -->
+
+    <header class="fixed w-full h-16 bg-gradient-to-l from-purple-950 to-[#7d42b6] text-white font-area-extended border-b-[1px] border-b-white flex-row-center z-40">
+        <nav class="flex-row-between pl-10 pr-5 w-full h-full">
+            <a href="index.html">
+                <img class=" w-16 lg:w-20" src="static/images/logo aira favicon.svg" alt="">
+            </a>
+            <div class="hidden lg:flex flex-row-center gap-10">
+                <a href="about-me.html" class="hover:text-fuchsia-400">About me</a>
+                <a href="index.html#skills" class="hover:text-fuchsia-400">Skills</a>
+                <a href="index.html#my-works" class="hover:text-fuchsia-400">My works</a>
+                <button class="contact hover:text-fuchsia-400">Contact</button>
+            </div>
+
+            <div class="lg:hidden flex-row-center cursor-pointer">
+                <svg id="mobile-menu-icon" role="button" aria-label="Open mobile menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>             
+            </div>
+        </nav>
+
+        
+    </header>
+    
+    <div id="backdrop" class="fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 z-40 opacity-0 pointer-events-none"></div>
+
+    <aside id="mobile-menu" class="fixed inset-y-0 right-0 w-72 bg-gradient-to-b from-purple-900 to-purple-800 shadow-lg transform transition-transform duration-300 ease-in-out translate-x-full z-50">
+        <button id="close-menu" class="cursor-pointer absolute top-5 right-5 p-2 text-white hover:text-pink-400 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+            </svg>
+        </button>
+
+        <nav class="w-full flex flex-col px-8 mt-24">
+            <a href="about-me.html" class="group flex-row-start text-white text-xl font-medium px-4 py-3 rounded-lg transition-all hover:pl-6 hover:ring hover:ring-white">
+                About me
+                <i class="opacity-0 group-hover:opacity-100 fa-solid fa-arrow-right mt-1 ml-3 animate-bounce-x"></i>
+            </a>
+            
+            <a href="#skills" class="group flex-row-start text-white text-xl font-medium px-4 py-3 rounded-lg transition-all hover:pl-6 hover:ring hover:ring-white">
+                Skills
+                <i class="opacity-0 group-hover:opacity-100 fa-solid fa-arrow-right mt-1 ml-3 animate-bounce-x"></i>
+            </a>
+            
+            <a href="#my-works" class="group flex-row-start text-white text-xl font-medium px-4 py-3 rounded-lg transition-all hover:pl-6 hover:ring hover:ring-white">
+                My works
+                <i class="opacity-0 group-hover:opacity-100 fa-solid fa-arrow-right mt-1 ml-3 animate-bounce-x"></i>
+            </a>
+            
+            <button class="contact group flex-row-start text-white text-xl font-medium px-4 py-3 rounded-lg transition-all hover:pl-6 hover:ring hover:ring-white">
+                Contacts
+                <i class="opacity-0 group-hover:opacity-100 fa-solid fa-arrow-right mt-1 ml-3 animate-bounce-x"></i>
+            </button>
+
+        </nav>
+
+    </aside>
+
+    <main class="overflow-x-hidden">
+
+        <section class="relative min-h-screen flex items-center px-4 py-24">
+            <div class="absolute inset-0 bg-[url('static/images/circuit-board.svg')] bg-cover opacity-5"></div>
+            <div class="container mx-auto px-2 lg:px-0 grid lg:grid-cols-2 gap-12 items-center">
+
+                <div class="text-left z-10">
+                    <span class="text-base sm:text-xl w-full font-semibold bg-gradient-to-br md:bg-gradient-to-r from-pink-400 to-purple-400 text-transparent bg-clip-text">
+                        Front-End Dev & Creative Coder
+                    </span>
+                    <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold text-white mt-4 mb-6 leading-tight">
+                        Building logic, <span class="whitespace-nowrap">loading dreams.</span>
+                    </h1>
+                    <div class="flex justify-start gap-4">
+                        <a href="index.html#my-works" class="px-3 py-1.5 sm:px-6 sm:py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-lg shadow-lg hover:scale-105 transition-transform whitespace-nowrap">
+                            My Works
+                        </a>
+                        <button class="contact px-3 py-1.5 sm:px-6 sm:py-3 bg-white/10 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-colors whitespace-nowrap">
+                            Contact Me
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative hidden lg:flex lg:pr-8 justify-center items-center h-80 lg:h-full group">
+                    <div class="relative w-96 md:h-96 transition-transform duration-500 group-hover:rotate-[-3deg] group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-500 rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
+                        <div class="absolute inset-0 bg-purple-900/80 backdrop-blur-lg rounded-full border border-white/10">
+                            <img src="static/images/logo aira per intero.png" alt="Aira Logo" class="w-full h-full object-contain md:w-64 lg:w-96">
+                        </div>
+                    </div>
+                    <div class="absolute -top-4 -left-4 w-16 h-16 bg-white/10 backdrop-blur-md border border-white/10 rounded-lg flex items-center justify-center transition-transform duration-500 group-hover:-translate-y-3">
+                                <i class="fab fa-html5 text-orange-500 sm:text-3xl md:text-4xl lg:text-4xl"></i>
+                    </div>
+                    <div class="absolute -bottom-8 right-10 w-16 h-16 bg-white/10 backdrop-blur-md border border-white/10 rounded-lg flex items-center justify-center transition-transform duration-500 group-hover:translate-y-3">
+                                <i class="fab fa-css3-alt text-blue-500 sm:text-3xl md:text-4xl lg:text-4xl"></i>
+                    </div>
+                    <div class="absolute top-1/2 -right-4 w-16 h-16 bg-white/10 backdrop-blur-md border border-white/10 rounded-lg flex items-center justify-center transition-transform duration-500 group-hover:translate-x-3">
+                                <i class="fab fa-js text-yellow-400 sm:text-2xl md:text-3xl lg:text-3xl"></i>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="py-20 bg-black/20">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-white">
+                        My <span class="bg-gradient-to-r from-pink-400 to-purple-400 text-transparent bg-clip-text">Approach</span>
+                    </h2>
+                    <p class="mt-4 text-lg text-purple-200 max-w-2xl mx-auto">The qualities I bring to every project to ensure excellent results.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center transition-all duration-300 hover:transform hover:-translate-y-2 hover:border-pink-400/50">
+                        <div class="mb-4">
+                            <i class="fas fa-rocket text-4xl text-pink-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Proactive</h3>
+                        <p class="text-purple-200 text-sm">I anticipate needs and propose solutions before problems arise.</p>
+                    </div>
+
+                    <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center transition-all duration-300 hover:transform hover:-translate-y-2 hover:border-purple-400/50">
+                        <div class="mb-4">
+                            <i class="fas fa-bullseye text-4xl text-purple-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Determined</h3>
+                        <p class="text-purple-200 text-sm">I tackle challenges with tenacity, turning obstacles into opportunities.</p>
+                    </div>
+
+                    <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center transition-all duration-300 hover:transform hover:-translate-y-2 hover:border-pink-400/50">
+                        <div class="mb-4">
+                            <i class="fas fa-balance-scale-right text-4xl text-pink-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Realistic</h3>
+                        <p class="text-purple-200 text-sm">I balance ambition and feasibility to ensure concrete and sustainable results.</p>
+                    </div>
+
+                    <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center transition-all duration-300 hover:transform hover:-translate-y-2 hover:border-purple-400/50">
+                        <div class="mb-4">
+                            <i class="fas fa-book-open text-4xl text-purple-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Curious</h3>
+                        <p class="text-purple-200 text-sm">I'm always exploring new technologies and methods to improve my work.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-black/20">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-bold text-center text-white mb-16">My <span class="bg-gradient-to-r from-pink-400 to-purple-400 text-transparent bg-clip-text">Learning Journey</span></h2>
+                    
+                    <div class="space-y-12">
+                        <!-- Tappa 2022-23 -->
+                        <div class="grid md:grid-cols-4 gap-6 items-start">
+                            <div class="md:col-span-1 md:text-right">
+                                <h3 class="text-3xl font-bold bg-gradient-to-r from-pink-400 to-purple-400 text-transparent bg-clip-text">2022-23</h3>
+                            </div>
+                            <div class="md:col-span-3 border-l-2 border-purple-800 pl-6">
+                                <h4 class="text-2xl font-semibold text-white mb-2">The Beginning</h4>
+                                <p class="text-purple-200 leading-relaxed">
+                                    Started my journey at Istituto Tecnico Majorana, focusing on Computer Science. Built a foundational understanding of <span class="text-pink-400 font-semibold">HTML & CSS</span> and explored logic through tools like <span class="text-pink-400 font-semibold">Flowgorithm</span>.
+                                </p>
+                            </div>
+                        </div>
+    
+                        <!-- Tappa 2023-24 -->
+                        <div class="grid md:grid-cols-4 gap-6 items-start">
+                            <div class="md:col-span-1 md:text-right">
+                                <h3 class="text-3xl font-bold bg-gradient-to-r from-pink-400 to-purple-400 text-transparent bg-clip-text">2023-24</h3>
+                            </div>
+                            <div class="md:col-span-3 border-l-2 border-purple-800 pl-6">
+                                <h4 class="text-2xl font-semibold text-white mb-2">Diving into Programming</h4>
+                                <p class="text-purple-200 leading-relaxed">
+                                    Dived into programming fundamentals with <span class="text-pink-400 font-semibold">C and C++</span>. My passion for web development ignited, leading me to self-learn and go beyond the school curriculum with online resources.
+                                </p>
+                            </div>
+                        </div>
+    
+                        <!-- Tappa 2024-Present -->
+                        <div class="grid md:grid-cols-4 gap-6 items-start">
+                            <div class="md:col-span-1 md:text-right">
+                                <h3 class="text-3xl font-bold bg-gradient-to-r from-pink-400 to-purple-400 text-transparent bg-clip-text">2024-Present</h3>
+                            </div>
+                            <div class="md:col-span-3 border-l-2 border-purple-800 pl-6">
+                                <h4 class="text-2xl font-semibold text-white mb-2">Expanding Horizons</h4>
+                                <p class="text-purple-200 leading-relaxed">
+                                    Embraced <span class="text-pink-400 font-semibold">Java</span> in the curriculum and, on my teacher's recommendation, mastered <span class="text-pink-400 font-semibold">Tailwind CSS</span> to supercharge my front-end skills. Also began exploring the versatility of <span class="text-pink-400 font-semibold">Python</span>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-black/20">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white">
+                        My <span class="bg-gradient-to-r from-pink-400 to-purple-400 text-transparent bg-clip-text">Certifications</span>
+                    </h2>
+                    <p class="text-gray-400 mt-4">Professional credentials that validate my expertise</p>
+                </div>
+        
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-purple-900/50 backdrop-blur-sm p-6 rounded-2xl transition-all hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10">
+                        <div class="mb-4">
+                            <i class="fa-solid fa-certificate text-4xl text-pink-400 mb-4"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Oxford B2 English Certification</h3>
+                        <p class="text-gray-400 mb-4">University of Oxford</p>
+                        <div class="relative h-64 w-full mb-4">
+                            <img 
+                                src="static/images/oxford certificate B2.png" 
+                                alt="Oxford B2 English Certification" 
+                                class="w-full h-full object-cover object-top rounded-lg border border-white"
+                                loading="lazy"
+                            />
+                        </div>
+                        <p class="text-gray-400 mb-4">
+                            This certification demonstrates my proficiency in English at the B2 level according to the Common European Framework of Reference for Languages (CEFR). 
+                            It confirms my ability to communicate effectively in both professional and academic contexts.
+                        </p>
+                        <a href="static/Aurelia Tusa certificato corso PNRR.pdf" class="inline-flex items-center text-purple-300 hover:text-pink-400 transition-colors">
+                            View Full Certificate
+                            <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="py-20">
+            <div class="container mx-auto">
+                 <h2 class="text-4xl font-bold text-center text-white mb-16 px-4">My Universe: <span class="bg-gradient-to-r from-pink-400 to-purple-400 text-transparent bg-clip-text">Passions & Toolkit</span></h2>
+    
+                <div class="relative h-fit">
+                    <!-- Wrapper per lo scroll -->
+                    <h3 class="text-3xl mb-2 bg-gradient-to-r from-pink-400 to-purple-400 text-transparent bg-clip-text">Passions</h3>
+                    <div class="py-2 flex gap-6 overflow-x-auto pb-8 pl-4 pr-4 no-scrollbar">
+    
+                        <!-- Card 1: Coding -->
+                        <div class="flex-shrink-0 w-72 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 flex flex-col items-center text-center transition-all duration-300 hover:transform hover:-translate-y-2 hover:border-pink-400/50">
+                            <i class="fas fa-code text-4xl text-pink-400 mb-4"></i>
+                            <h3 class="text-xl font-bold text-white mb-2">Coding</h3>
+                            <p class="text-purple-200 text-sm">Where creativity meets logic</p>
+                        </div>
+    
+                        <!-- Card 2: Photography -->
+                        <div class="flex-shrink-0 w-72 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 flex flex-col items-center text-center transition-all duration-300 hover:transform hover:-translate-y-2 hover:border-pink-400/50">
+                            <svg class="mb-1" xmlns="http://www.w3.org/2000/svg"  width="50" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-camera"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2" /><path d="M9 13a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /></svg>
+                            <h3 class="text-xl font-bold text-white mb-2">Photography</h3>
+                            <p class="text-purple-200 text-sm">Capturing moments, telling stories</p>
+                        </div>
+    
+                        <!-- Card 3: Baking -->
+                        <div class="flex-shrink-0 w-72 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 flex flex-col items-center text-center transition-all duration-300 hover:transform hover:-translate-y-2 hover:border-pink-400/50">
+                            <i class="fas fa-cookie-bite text-4xl text-orange-300 mb-4"></i>
+                            <h3 class="text-xl font-bold text-white mb-2">Baking Sweets</h3>
+                            <p class="text-purple-200 text-sm">Sweet creations, made with love</p>
+                        </div>
+    
+                    </div>
+                     <!-- Indicatore di scroll per desktop -->
+                    <div class="absolute bottom-0 right-10 flex items-center gap-2 text-purple-400 text-sm">
+                        <span>Scroll for more</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+
+                    <!-- Wrapper per lo scroll -->
+                    <h3 class="text-3xl mb-2 bg-gradient-to-l mt-8 from-pink-400 to-purple-400 text-transparent bg-clip-text">Tools I can't live without anymore</h3>
+                    <div class="py-2 flex gap-6 overflow-x-auto pb-8 pl-4 pr-4 no-scrollbar">
+                
+                        <!-- Card 1: GitHub -->
+                        <a href="https://github.com/Aira-32" target="_blank" class="flex-shrink-0 w-72 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 flex flex-col items-center text-center transition-all duration-300 hover:transform hover:-translate-y-2 hover:border-gray-400/50">
+                            <i class="fab fa-github text-4xl text-gray-300 mb-4"></i>
+                            <h3 class="text-xl font-bold text-white mb-2">GitHub</h3>
+                            <p class="text-purple-200 text-sm">My coding workspace</p>
+                        </a>
+    
+                        <!-- Card 2: YouTube -->
+                         <a href="https://youtube.com" target="_blank" class="flex-shrink-0 w-72 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 flex flex-col items-center text-center transition-all duration-300 hover:transform hover:-translate-y-2 hover:border-red-500/50">
+                            <i class="fab fa-youtube text-4xl text-red-500 mb-4"></i>
+                            <h3 class="text-xl font-bold text-white mb-2">YouTube</h3>
+                            <p class="text-purple-200 text-sm">Endless learning source</p>
+                        </a>
+                        
+                        <!-- Card 3: Windsurf -->
+                         <a href="https://windsurf.com/editor" target="_blank" class="flex-shrink-0 w-72 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 flex flex-col items-center text-center transition-all duration-300 hover:transform hover:-translate-y-2 hover:border-white/50">
+                            <svg class="w-fit" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+                                <linearGradient id="SfD2klaBA6F1Kuud-CpAYa_d31ZyFhMRYFS_gr1" x1="24" x2="24" y1="6.001" y2="41.999" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f9f3e9"></stop><stop offset="1" stop-color="#f9e9cd"></stop></linearGradient><path fill="url(#SfD2klaBA6F1Kuud-CpAYa_d31ZyFhMRYFS_gr1)" d="M39.002,41.97L9.033,41.999c-1.65,0.002-3.001-1.347-3.003-2.997L6.001,9.033	C5.999,7.383,7.348,6.031,8.998,6.03l29.969-0.029c1.65-0.002,3.001,1.347,3.003,2.997l0.029,29.969	C42.001,40.617,40.652,41.969,39.002,41.97z"></path><path fill="#0b100f" d="M37.544,16.085h-0.261c-1.374-0.002-2.489,1.111-2.489,2.484v5.556c0,1.11-0.917,2.008-2.009,2.008	c-0.648,0-1.296-0.326-1.68-0.874l-5.675-8.105c-0.471-0.673-1.237-1.074-2.066-1.074c-1.294,0-2.458,1.1-2.458,2.458v5.589	c0,1.11-0.91,2.008-2.009,2.008c-0.651,0-1.297-0.326-1.681-0.874l-6.35-9.07c-0.143-0.205-0.466-0.104-0.466,0.147v4.846	c0,0.245,0.075,0.483,0.215,0.684l6.25,8.925c0.369,0.527,0.914,0.919,1.542,1.061c1.572,0.357,3.019-0.853,3.019-2.395v-5.585	c0-1.11,0.899-2.008,2.009-2.008h0.003c0.669,0,1.296,0.326,1.68,0.874l5.676,8.104c0.472,0.674,1.199,1.074,2.065,1.074	c1.323,0,2.456-1.101,2.456-2.458v-5.587c0-1.11,0.899-2.008,2.009-2.008h0.222c0.139,0,0.252-0.112,0.252-0.251v-5.276	c0-0.139-0.112-0.251-0.252-0.251H37.544z"></path>
+                            </svg>
+                            <h3 class="text-xl font-bold text-white mt-1 mb-2">Windsurf</h3>
+                            <p class="text-purple-200 text-sm">My coding companion</p>
+                        </a>
+                        
+                        <!-- Aggiungi altre card qui se necessario -->
+    
+                    </div>
+                     <!-- Indicatore di scroll per desktop -->
+                    <div class="absolute bottom-0 right-10 flex items-center gap-2 text-purple-400 text-sm">
+                        <span>Scroll for more</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    
+    </main>
+
+    <footer class="bg-purple-950/70 text-white py-12 px-4 sm:px-6 lg:px-8"> <!-- MODIFICA: Sfondo leggermente trasparente -->
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- Logo and description column -->
+                <div class="lg:col-span-2 space-y-6">
+                    <div>
+                        <h2 class="text-4xl font-bold bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent inline-block">Aira</h2>
+                        <div class="w-24 h-0.5 bg-gradient-to-r from-pink-400 to-purple-500 mt-2 mb-4 rounded-full"></div>
+                    </div>
+                    <p class="text-purple-200 text-lg max-w-md"> <!-- MODIFICA: max-w per migliore leggibilità su schermi larghi -->
+                        Front End Developer & UI/UX enthusiast. <br>
+                        Turning ideas into beautiful, functional websites.
+                    </p>
+                    <div class="flex space-x-6 pt-2">
+                        <a href="https://github.com/Aira-32" target="_blank" 
+                           class="text-purple-200 hover:text-pink-300 transition-all duration-300 transform hover:scale-110"
+                           aria-label="GitHub Profile">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/your_instagram" target="_blank" 
+                           class="text-purple-200 hover:text-pink-300 transition-all duration-300 transform hover:scale-110"
+                           aria-label="Instagram Profile">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-white mb-6 relative inline-block"> <!-- MODIFICA: Aumentato mb -->
+                        Quick Links
+                        <span class="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full"></span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-purple-200 hover:text-pink-300 transition-colors flex items-center group">
+                            <span class="w-1.5 h-1.5 rounded-full bg-pink-400 mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                            Home
+                        </a></li>
+                        <li><a href="about-me.html" class="text-purple-200 hover:text-pink-300 transition-colors flex items-center group">
+                            <span class="w-1.5 h-1.5 rounded-full bg-pink-400 mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                            About Me
+                        </a></li>
+                        <li><a href="#my-works" class="text-purple-200 hover:text-pink-300 transition-colors flex items-center group">
+                            <span class="w-1.5 h-1.5 rounded-full bg-pink-400 mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                            My Works
+                        </a></li>
+                        <li>
+                            <button class="contact text-purple-200 hover:text-pink-300 transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 rounded-full bg-pink-400 mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                                Contact
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-white mb-6 relative inline-block">
+                        Contact Me
+                        <span class="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full"></span>
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center">
+                                    <i class="fas fa-envelope text-white text-sm"></i>
+                                </div>
+                            </div>
+                            <a href="mailto:aira.dev32@email.com" 
+                               class="ml-3 text-purple-200 hover:text-pink-300 transition-colors break-all"> <!-- MODIFICA: break-all per evitare overflow su mobile -->
+                                aira.dev32@email.com
+                            </a>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center">
+                                    <i class="fab fa-instagram text-white text-sm"></i>
+                                </div>
+                            </div>
+                            <a href="https://www.instagram.com/your_instagram" target="_blank" 
+                               class="ml-3 text-purple-200 hover:text-pink-300 transition-colors">
+                                DM me on Instagram
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-purple-800/50 mt-12 pt-8 text-center"> 
+                <p class="text-purple-300 text-sm md:text-base">&copy; 2025 Aira. All rights reserved.</p>
+                <p class="text-purple-400 text-xs mt-2">Made with a lot of passion 💫</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
