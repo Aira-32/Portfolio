@@ -54,27 +54,8 @@
         @apply flex justify-evenly items-center;
     }
 
-    .flex-col-evenly {
-        @apply flex flex-col justify-evenly items-center;
-    }
-
     .flex-row-around {
         @apply flex justify-around items-center;
-    }
-
-    
-    .flex-col-around {
-        @apply flex flex-col justify-around items-center;
-    }
-
-    
-
-    .flex-col-items-start {
-        @apply flex flex-col items-start;
-    }
-
-    .flex-col-items-end {
-        @apply flex flex-col items-end;
     }
 
     .flex-row-items-start {

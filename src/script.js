@@ -1,41 +1,68 @@
 // Seleziona gli elementi del DOM
-const mobileMenuIcon = document.getElementById('mobile-menu-icon');
-const mobileMenu = document.getElementById('mobile-menu');
-const backdrop = document.getElementById('backdrop');
+const menuButton = document.getElementById('menu-button');
 const closeButton = document.getElementById('close-menu');
-const navLinks = document.querySelectorAll('#mobile-menu nav a');
+const mobileMenu = document.getElementById('mobile-menu');
+const menuLinks = document.querySelectorAll('#mobile-menu a');
+let backdrop = null;
 
-// Funzione per aprire/chiudere il menu
-function toggleMobileMenu() {
-    // Aggiungi/rimuovi la classe per mostrare/nascondere il menu
-    mobileMenu.classList.toggle('translate-x-full');
+// Funzione per aprire il menu
+function openMenu() {
+    mobileMenu.classList.remove('translate-x-full');
+    document.body.style.overflow = 'hidden';
     
-    // Gestisci l'opacità dell'overlay
-    backdrop.classList.toggle('opacity-0');
-    backdrop.classList.toggle('pointer-events-none');
+    // Rimuovi eventuali backdrop esistenti
+    const existingBackdrop = document.getElementById('backdrop');
+    if (existingBackdrop) {
+        existingBackdrop.remove();
+    }
+    
+    // Crea il nuovo backdrop
+    backdrop = document.createElement('div');
+    backdrop.className = 'fixed inset-0 bg-black/50 backdrop-blur-sm z-40';
+    backdrop.id = 'backdrop';
+    document.body.appendChild(backdrop);
+    
+    // Aggiungi l'evento di chiusura al nuovo backdrop
+    backdrop.addEventListener('click', closeMenu);
+}
+
+// Funzione per chiudere il menu
+function closeMenu() {
+    mobileMenu.classList.add('translate-x-full');
+    document.body.style.overflow = '';
+    
+    // Rimuovi il backdrop
+    const existingBackdrop = document.getElementById('backdrop');
+    if (existingBackdrop) {
+        existingBackdrop.remove();
+    }
 }
 
 // Aggiungi gli event listener
-mobileMenuIcon.addEventListener('click', toggleMobileMenu);
-closeButton.addEventListener('click', toggleMobileMenu);
-backdrop.addEventListener('click', toggleMobileMenu);
+if (menuButton) {
+    menuButton.addEventListener('click', openMenu);
+}
 
-// Chiudi il menu quando si clicca su un link
-navLinks.forEach(link => {
-    link.addEventListener('click', toggleMobileMenu);
+if (closeButton) {
+    closeButton.addEventListener('click', closeMenu);
+}
+
+// Chiudi il menu al click su qualsiasi link del menu
+menuLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
 });
 
 // Chiudi il menu con il tasto ESC
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !mobileMenu.classList.contains('translate-x-full')) {
-        toggleMobileMenu();
+        closeMenu();
     }
 });
 
 // Chiudi il menu al ridimensionamento della finestra
 window.addEventListener('resize', () => {
     if (window.innerWidth >= 1024 && !mobileMenu.classList.contains('translate-x-full')) {
-        toggleMobileMenu();
+        closeMenu();
     }
 });
 
